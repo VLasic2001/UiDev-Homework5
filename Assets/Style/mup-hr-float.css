@@ -2,27 +2,23 @@
     margin: 0;
     padding: 0;
 }
-main{
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-}
 .articles{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 75%;
+    float: left;
+    width: 67%;
+    overflow: hidden;
 }
 .main-article{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     width: 75%;
-    height: 450px;
+    height: 501px;
     position: relative;
     background-image: url("../Images/background-image-large.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    float: left;
+    vertical-align: bottom;
 }
 .main-article__type{
     position: absolute;
@@ -46,6 +42,7 @@ main{
     margin-bottom: 40px;
 }
 .side-articles{
+    float: right;
     width: 25%;
 }
 .side-article{
@@ -53,7 +50,8 @@ main{
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
-    height: 33.33%;
+    height: 167px;
+    width: 100%;
     background-image: url("../Images/background-image-small.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -93,13 +91,12 @@ main{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 60px;
     color: rgb(65, 65, 65)
 }
 .press__button{
     text-transform: uppercase;
-    margin-left: -10px;
-    padding: 10px 100px;
+    padding: 10px 80px;
     box-sizing: border-box;
     align-self: center;
     background-color: rgb(241, 240, 240);
@@ -122,39 +119,40 @@ main{
     font-size: 14px;
 }
 @media screen and (max-width: 1024px){
-    .articles{
-        flex-direction: column;
-    }
-    .side-articles{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
     .main-article{
         width: 100%;
     }
+    .side-articles{
+        float: none;
+        width: 100%;
+    }
     .side-article{
-        width: 33.33%;	
-        height: 150px;
+        float: left;
+        width: 33.33%;
+        overflow: hidden;
+    }
+    .press__button{
+        margin: 50px 0;
     }
 }
-@media screen and (max-width: 876px){
-    main{
-        flex-direction: column;
-    }
+@media screen and (max-width: 768px){
     .press{
-        margin: 30px 50px;
+        float: left;
+        margin-left: 19%;
     }
     .articles{
         width: 100%;
     }
 }
 @media screen and (max-width: 425px){
-    .side-articles{
-        flex-direction: column;
+    .side-article{
+        float: none;
         width: 100%;
     }
-    .side-article{
-        width: 100%;
+    .main-article{
+        height: 350px;
+    }
+    .press{
+        margin-left: 5px
     }
 }
