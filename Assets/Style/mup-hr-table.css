@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.main{
+    width: 100%;
+}
+.main-article{
+    display: block;
+    height: 450px;
+    position: relative;
+    background-image: url("../Images/background-image-large.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.main-article__type{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px;
+    background-color: blue;
+    font-weight: 600;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+}
+.main-article__date{
+    position: absolute;
+    bottom: 270px;    
+    margin-bottom: 18px;
+    margin-left: 25px;
+    margin-right: 35px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-article__title{
+    position: absolute;
+    bottom: 140px;
+    margin-bottom: 18px;
+    margin-left: 25px;
+    margin-right: 35px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-article__text{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 18px;
+    margin-left: 25px;
+    margin-right: 35px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.side-articles{
+    display: block;
+    width: 100%;
+}
+.press{
+    display: block;
+}
+.side-article{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 150px;
+    background-image: url("../Images/background-image-small.jpg");
+    color: white;
+}
+.side-article__type{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    background-color: blue;
+    font-weight: 600;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+}
+.side-article__date{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-style: italic; 
+    position: relative;
+    top: 60px;
+}
+.side-article__text{
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    position: relative;
+    top: 80px;
+}
+.press{
+    color: rgb(107, 107, 107);
+}
+.press__title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(65, 65, 65)
+}
+.press__button{
+    text-transform: uppercase;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    background-color: rgb(241, 240, 240);
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgb(65, 65, 65)
+}
+.press__list{
+    margin: 30px 30px;
+    list-style: none;
+}
+.press__list__item{
+    padding: 15px 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(182, 182, 182);
+}
+.press__list__item__date{
+    font-style: italic;
+    font-size: 14px;
+}
+@media screen and (min-width: 768px){
+    .side-article{
+        display: table-cell;
+        width: 33.33%;
+    }
+    .main-article__date{
+        position: absolute;
+        bottom: 220px;
+    }
+    .side-article__date{
+        position: relative;
+        top: 30px;
+    }
+    .side-article__text{
+        position: relative;
+        top: 40px;
+    }
+    .main-article__text{
+        position: absolute;
+        bottom: 20px;
+    }
+    .main-article__title{
+        position: absolute;
+        bottom: 90px;
+    }
+    .main-article__date{
+        position: absolute;
+        bottom: 150px;
+    }
+    .press__button{
+        margin: 30px 28%;
+    }
+    .press__list{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+@media screen and (min-width: 1024px){
+    .press{
+        display: table-cell;
+        width: 33.33%;
+    }
+    .main-article__title{
+        bottom: 100px;
+    }
+    .press__button{
+        margin: 30px 28%;
+    }
+    .press__button{
+        margin: 30px 0 30px 6px;
+    }
+}
+@media screen and (min-width: 1440px){
+    .side-article{
+        display: block;
+        width: 100%;
+        height: 163.33px;
+    }
+    .side-article__text{
+        position: relative;
+        top: 90px;
+    }    
+    .side-article__date{
+        position: relative;
+        top: 80px;
+    }
+    .main-article{
+        display: table-cell;
+        width: 50%;
+    }
+    .press__button{
+        margin: 30px 15%;
+    }
+}
